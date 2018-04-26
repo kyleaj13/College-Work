@@ -16,7 +16,7 @@ def print_options():
 
 print("---- WARNING ----")
 print("This program will open things for you, don't panic!")
-print("!! Some of these functions will not work unless you are on the newest version of windows !!")
+print("!! Some of these functions will not work unless you are running Windows 10 !!")
 print_options()
 print("****Please use Y or N when using the program****")
 choice = input("Option: ").lower()
@@ -59,6 +59,8 @@ def monthly_m():
         print("If there are any updates available, they will now automatically download")
     elif m_choice == "a":
         webbrowser.open("ms-settings:windowsupdate")
+        print("")
+        print("Now click check for updates")
 
 
 def yearly_m():
@@ -116,19 +118,13 @@ def pc_inside():
     # if clean == "y":
         # print("Great!")
     # elif clean == "n":
-    webbrowser.open("https://www.howtogeek.com/72716/how-to-thoroughly-clean-your-dirty-desktop-computer/")
     air = input("Do you have your own compressed air? ").lower()
     if air == "y":
         print("Great!")
+        webbrowser.open("https://www.howtogeek.com/72716/how-to-thoroughly-clean-your-dirty-desktop-computer/")
     elif air == "n":
+        webbrowser.open("https://www.howtogeek.com/72716/how-to-thoroughly-clean-your-dirty-desktop-computer/")
         webbrowser.open("https://www.amazon.co.uk/Electronics-Compressed-Air-Dusters/b?ie=UTF8&node=200927031")
-
-
-def pc_outside():
-    print("")
-    print("If you have glass in your case a regular glass cleaner will work fine")
-    print("Use a damp cloth to wipe down the rest of your case")
-    print("Be careful not to get any water in your computers ports!")
 
 
 def pc():
@@ -146,6 +142,13 @@ def pc():
             print("")
     else:
         print("Sorry, that input is not valid, please try again!")
+
+
+def pc_outside():
+    print("")
+    print("If you have glass in your case a regular glass cleaner will work fine")
+    print("Use a damp cloth to wipe down the rest of your case")
+    print("Be careful not to get any water in your computers ports!")
 
 
 def weekly_list():
